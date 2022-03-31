@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react/cjs/react.production.min';
+import { useState } from 'react';
 import ToDoList from './ToDoList';
 
 function App() {
@@ -22,10 +21,22 @@ function App() {
   return (
     <>
       <h1>To-do</h1>
-      <input placeholder="할 일을 입력해 주세요" value={newTask} onChange={onNewTask} />
-      <button type="button" onClick={onAddTask}>추가</button>
+      <input
+        placeholder="할 일을 입력해 주세요"
+        value={newTask}
+        onChange={onNewTask}
+      />
+      <button
+        type="button"
+        onClick={onAddTask}
+      >
+        추가
+      </button>
       <p>
-        <ToDoList todo={todo} onRemoveTask={onRemoveTask} />
+        <ToDoList
+          todo={todo}
+          onRemoveTask={onRemoveTask}
+        />
       </p>
     </>
   );
