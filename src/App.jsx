@@ -11,8 +11,8 @@ function App() {
     return todo[todo.length - 1].id + 1;
   }
 
-  function handleNewTask(event) {
-    setNewTask(event.target.value);
+  function handleNewTask(value) {
+    setNewTask(value);
   }
 
   function handleAddTask() {
@@ -28,9 +28,10 @@ function App() {
     <>
       <h1>To-do</h1>
       <input
+        name="taskInput"
         placeholder="할 일을 입력해 주세요"
         value={newTask}
-        onChange={handleNewTask}
+        onChange={(event) => handleNewTask(event.target.value)}
       />
       <button
         type="button"
